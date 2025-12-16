@@ -216,7 +216,7 @@
             return 130.0 * dot(m, g);
         }
 
-        // [Tu código get_flower_shape y get_stem_shape aquí...]
+
         float get_flower_shape(vec2 _p, float _pet_n, float _angle, float _outline) {
             _angle *= 3.;
             _p = vec2(_p.x * cos(_angle) - _p.y * sin(_angle),
@@ -254,7 +254,6 @@
             stem_shape *= (1. - step(.17, u_stop_time));
             return stem_shape;
         }
-        // [Fin de tu código get_flower_shape y get_stem_shape]
 
         void main() {
 
@@ -432,7 +431,6 @@
             alpha: true,
         })
         
-        // Color de fondo para que las flores y mariposas resalten
         renderer.setClearColor(0x1a1a1a, 1)
 
         renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
@@ -454,8 +452,8 @@
             cleanCanvas()
         })
 
-        // Inicialización de mariposas (5 instancias con colores aleatorios)
-        initializeButterflies(5); 
+        // Inicialización de mariposas
+        initializeButterflies(12); 
 
         render()
 
